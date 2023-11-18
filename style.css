@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 16rem 11.5rem;
+  place-content: center;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+
+  --bg-color: #000;
+  --input-txt-color: #7C7C8A;
+  --input-bg-color: #06181C;
+  --btn-color: #fff;
+  --btn-bg-color: #065E7C;
+  --th-bg-color: #092D38;
+  --all-write-color: #E1E1E6;
+  --btn-remove: #F75A68;
+  --row-odd: rgba(6, 22, 27, 0.50);
+  --row-even: #06181C;
+  --table-row: #4A808C;
+}
+
+#app {
+  width: 112.2rem;
+  height: max-content;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8.8rem;
+}
+
+.search{
+  display: flex;
+}
+
+header img {
+  height: 3.2rem;
+  margin-top: auto;
+  margin-right: auto;
+}
+
+header input {
+  border-radius: .5rem;
+  height: 4.8rem;
+  width: 46.2rem;
+  background-color: var(--input-bg-color);
+  padding: 1.6rem;
+  margin-right: .8rem;
+  border: none;
+  color: var(--input-txt-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1.2rem 3.2rem;
+  width: 17rem;
+  height: 4.8rem;
+  border-radius: .5rem;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+  border: none;
+  cursor: pointer;
+  line-height: 2.4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+header button:hover {
+  background-color: var(--btn-color);
+  color: var(--btn-bg-color);
+}
+
+header button:hover svg path {
+  fill: var(--btn-bg-color);
+}
+
+
+table {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  width: 100%;
+  max-height: 68.8rem;
+  border-collapse: collapse;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--th-bg-color);
+}
+
+table-height{
+  height: 68.8rem;
+}
+
+table thead {
+  background-color: var(--th-bg-color);
+  height: 6.4rem;
+}
+
+thead th {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  color: var(--all-write-color);
+  text-align: left;
+  font-size: 2.0rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+thead th:nth-child(1) {
+  width: 50.4rem;
+  border-top-left-radius: 1.2rem;
+}
+
+thead th:nth-child(2) {
+  width: 22rem
+}
+
+thead th:nth-child(3) {
+  width: 22rem
+}
+
+thead th:nth-child(4) {
+  width: 18rem
+}
+
+tbody {
+  overflow: auto;
+}
+
+tbody::-webkit-scrollbar {
+  width: .6rem;
+}
+
+tbody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: #4A808C;
+  border-radius: 1rem;
+}
+
+td tr {
+  display: flex;
+  height: 10.4rem;
+}
+
+tbody td {
+  color: var(--all-write-color);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  text-align: left;
+  align-items: center;
+}
+
+td div {
+  display: flex;
+}
+
+#line-break {
+  display: flex;
+  flex-direction: column;
+}
+
+tbody img {
+  margin-right: 1.6rem;
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+}
+
+tbody a{
+  text-decoration: none;
+}
+
+tbody h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+  color: var(--all-write-color);
+}
+
+tbody p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--all-write-color);
+}
+
+tbody td:nth-child(1) {
+  width: 50.4rem;
+}
+
+tbody td:nth-child(2) {
+  width: 22rem;
+}
+
+tbody td:nth-child(3) {
+  width: 22rem
+}
+
+tbody td:nth-child(4) {
+  width: 18rem
+}
+
+tbody:last-child:first-child {
+  border-bottom-left-radius: 1.2rem;
+}
+
+tbody:last-child {
+  border-bottom-right-radius: 1.2rem;
+}
+
+tbody td button {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+  border: none;
+  background-color: transparent;
+  color: var(--btn-remove);
+  cursor: pointer;
+}
+
+tbody td button:hover {
+  transform: scale(1.2);
+}
+
+table tr:nth-child(odd) {
+  background: var(--row-odd)
+}
+
+table tr:nth-child(even) {
+  background: var(--row-even)
+}
+
+.hidden {
+  display: none;
+}
+
+.not-fav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 105rem;
+  height: 58.9rem;
+}
+
+.not-fav img {
+  width: 13.2rem;
+  height: 12.5rem;
+  margin-right: 6rem;
+}
+
+.not-fav h1 {
+  color: #4E5455;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 24.781px;
+}
